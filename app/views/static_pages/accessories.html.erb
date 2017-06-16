@@ -1,0 +1,12 @@
+<h1>StaticPages#accessories</h1>
+<% Post.where(category_id: 4).each do |post| %>
+	<div class="post">
+<h2 class="title"><%= link_to post.title,post %></h2>
+<%= image_tag post.picture.url if post.picture? %>
+<h4 class="price"><%= post.price %></h4>
+	<div class="entry"><%= post.body %></div>
+	   
+	</div>
+	<br>
+	<hr>
+<% end %>
