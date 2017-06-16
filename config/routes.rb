@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :posts 
   resources :categories
+  resources :contacts, only: [:new, :create]
   
   get 'about', to: 'static_pages#about'
-  get 'contact', to: 'static_pages#contact'
+  get 'contact', to: 'contacts#new'
   get 'bikes', to: 'static_pages#bikes'
   get 'kids_item', to: 'static_pages#kids_item'
   get 'parts', to: 'static_pages#parts'

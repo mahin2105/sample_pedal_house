@@ -29,3 +29,7 @@
 	 font-family: 'Abel', sans-serif;
 	 font-size: 26px;
 }
+
+.hidden {
+	display: none;
+}
